@@ -5,8 +5,8 @@ function waitFor(element, eventName) {
     element.addEventListener(eventName, function handler() {
       element.removeEventListener(eventName, handler);
 
-      resolve(`
-        It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}`);
+      resolve(
+        `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}`);
     });
   });
 }
